@@ -1,0 +1,92 @@
+
+//  Widths
+//--------------------
+$contentsWidth: 1156px;
+$contentsWidth--narrow: 990px;
+
+// padding-size
+$contentPadding: 15px;
+
+//    Breakpoints
+//--------------------
+
+// 1024px - 
+// 768px - 1024px tablet
+// - 568px smartphone
+
+$se: 320px;
+$x : 375px;
+$xs: 568px;
+$sm: 768px;
+$md: 960px;
+$lg: 1024px;
+$xl: 1280px;
+
+// Portlait Width
+$eight: 667px;
+$eightPlus: 736px;
+$x: 812px;
+$ipad: $sm;
+$ipadpro: $lg;
+
+$breakpoints: (
+  'se': 'screen and (max-width: '$se')',
+  'x': 'screen and (max-width: '$x')',
+  'xs': 'screen and (max-width: '$xs')',
+  'sm': 'screen and (max-width: '$sm')',
+  'md': 'screen and (max-width: '$md')',
+  'lg': 'screen and (max-width: '$lg')',
+  'content': 'screen and (max-width: '$contentsWidth')',
+  'xl': 'screen and (max-width: '$xl')',
+  'content-max': 'screen and (max-width: 1300px)',
+) !default;
+
+//  Heights
+//--------------------
+$headerH: 56px;
+$headerH--sp: 53px;
+$headerW: 100px;
+
+//  transition
+//--------------------
+$transition: .2s ease-in-out;
+$transition__fast : .15s ease-in-out;
+$transitions__delay: .4s ease-in-out;
+
+//  border-radius
+//--------------------
+$bd-radius: 8px;
+
+//    Colors
+//--------------------
+$black        : #202020;
+$white        : #ffffff;
+$offWhite     : #f1f1f1;
+$glay         : #CCCCCC;
+$glay-l       : #dddddd;
+$glay-dark    : darken($glay, 25%);
+
+$chacoal      : #4b585c;
+$blue         : #125782;
+$blueLight  : #288FCF;
+$red          :#CF2728;
+$gold         :#8D7C6A;
+$gold-l       :#a07744;
+$yellow       :#f3eed1;
+
+$txtColor     : #333333;
+$txtColorLight: lighten($txtColor, 10%);
+
+$bgColor      : $offWhite;
+$mainColor    : $blueLight;
+$keyColor     : $red;
+
+$gradient-keyColor: radial-gradient(circle at 0% 0%, lighten($keyColor, 7.5%) 0%, $keyColor 20%, darken($keyColor, 15%) 100%);
+$gradient-keyColorHover: radial-gradient(circle at 0% 0%, lighten($keyColor, 7.5%) 0%, $keyColor 60%, darken($keyColor, 15%) 100%);
+
+//    Fonts
+//--------------------
+$sans_serif: 'Yu Gothic', "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+// $serif: "Sawarabi Mincho", "Noto Serif JP", "Yu Mincho", "游明朝","YuMincho", "游明朝体", serif;
+
+$fontawesome: "Font Awesome 5 Free";
