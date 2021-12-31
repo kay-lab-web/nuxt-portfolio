@@ -1,3 +1,5 @@
+const Sass = require('sass');
+
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
@@ -21,6 +23,7 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    '@/assets/sass/styles.scss' // プロジェクト内の SCSS ファイル
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -39,8 +42,26 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    'nuxt-fontawesome',
   ],
+  buildModules: ['@nuxtjs/style-resources'],
+  styleResouces: {
+    scss: [
+      '~/assets/sass/_foundation/_variables.scss',
+      '~/assets/sass/_foundation/_mediaqueries.scss',
+      '~/assets/sass/styles.scss',
+    ],
+  },
+
+  fontawesome: {
+    imports: [
+      {
+        set: '@fortawesome/free-solid-svg-icons',
+        icons: ['fas'],
+      },
+    ],
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
@@ -50,5 +71,10 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    loaders: {
+      scss: {
+        implementation: Sass
+      }
+    },
   }
 }
