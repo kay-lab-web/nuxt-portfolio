@@ -50,17 +50,6 @@ a {
   &:hover {
     color: $blue;
   }
-  &:not(.Btn) {
-    position: relative;
-    &[target=_blank] {
-      & > .svg-inline--fa {
-        margin-left: 1rem;
-        @include mq-max(se) {
-          margin-left: 0.3333rem;
-        }
-      }
-    }
-  }
 }
 
 ul {

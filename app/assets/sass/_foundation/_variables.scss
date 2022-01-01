@@ -43,7 +43,7 @@ $breakpoints: (
 
 //  Heights
 //--------------------
-$headerH: 56px;
+$headerH: 4rem;
 $headerH--sp: 53px;
 $headerW: 100px;
 
@@ -68,7 +68,9 @@ $glay-dark    : darken($glay, 25%);
 
 $chacoal      : #4b585c;
 $blue         : #125782;
-$blueLight  : #288FCF;
+$blueLight    : #288FCF;
+$greenDark    :#397469;
+$green        : lighten($greenDark, 10%);
 $red          :#CF2728;
 $gold         :#8D7C6A;
 $gold-l       :#a07744;
@@ -78,7 +80,7 @@ $txtColor     : #333333;
 $txtColorLight: lighten($txtColor, 10%);
 
 $bgColor      : $offWhite;
-$mainColor    : $blueLight;
+$mainColor    : $green;
 $keyColor     : $red;
 
 $gradient-keyColor: radial-gradient(circle at 0% 0%, lighten($keyColor, 7.5%) 0%, $keyColor 20%, darken($keyColor, 15%) 100%);
