@@ -222,7 +222,7 @@
       width: 2em;
       height: 3px;
       background-color: $mainColor;
-      top: 50%;
+      top: calc( 50% - 0.05rem );
       left: 25%;
       &:nth-of-type(1) {
         transform: rotateZ(45deg) translateY(0);
