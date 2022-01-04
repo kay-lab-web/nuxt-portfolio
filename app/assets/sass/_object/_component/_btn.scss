@@ -1,0 +1,26 @@
+.Btn {
+  display: inline-block;
+  border: 1px solid $blueDark;
+  border-radius: 99rem;
+  padding: 0.5rem 2rem;
+  background-color: $blueDark;
+  color: $white;
+  font-weight: 500;
+  box-shadow: 0 0 10px transparentize($black, .84);
+  transition: color $transition,
+              background-color $transition;
+  &:hover {
+      color: $blueDark;
+      background-color: $white;
+      box-shadow: 0 0 15px transparentize($black, .76);
+    }
+
+    &--white {
+      background-color: $white;
+      color: $keyColor;
+    }
+  &__wrap {
+    text-align: center;
+    margin: 30px auto;
+  }
+}

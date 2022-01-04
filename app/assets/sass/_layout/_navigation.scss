@@ -16,7 +16,7 @@
   }
 
   &__item {
-    & > .nuxt-link-active {
+    & > a {
       font-weight: 700;
       padding: 0.5em 0.5rem;
       color: $txtColor;
@@ -24,6 +24,9 @@
       &:hover {
         color: $mainColor;
       }
+    }
+    & > .nuxt-link-active {
+      color: $mainColor;
     }
   }
 

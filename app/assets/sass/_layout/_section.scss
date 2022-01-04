@@ -1,0 +1,66 @@
+.Section {
+  margin: 0 auto;
+  max-width: $lg;
+  padding: 70px 0;
+  @include mq-max(content) {
+    padding: 70px $contentPadding;
+  }
+  @include mq-max(xs) {
+    padding: 50px $contentPadding;
+  }
+  &--full {
+    max-width: 100%;
+    @include mq-max(xl) {
+      padding: 0;
+    }
+  }
+
+  &--medium {
+    max-width: $md;
+    margin: 0 auto;
+    padding: 0 0 70px;
+    @include mq-max(content) {
+      padding: 0 $contentPadding 70px;
+    }
+    @include mq-max(xs) {
+      padding: 0 $contentPadding 50px;
+    }
+  }
+
+  &--narrow {
+    max-width: $xs;
+    margin: 0 auto;
+    padding: 0 0 70px;
+    @include mq-max(content) {
+      padding: 0 $contentPadding 70px;
+    }
+    @include mq-max(xs) {
+      padding: 0 $contentPadding 50px;
+    }
+  }
+
+  &--keyColor {
+    max-width: 100%;
+    background-color: $keyColor;
+    > .Section__inner {
+      max-width: $lg;
+      margin: 0 auto;
+    }
+  }
+
+  &--glay {
+    max-width: 100%;
+    background-color: $glay-l;
+    > .Section__inner {
+      max-width: $lg;
+      margin: 0 auto;
+    }
+  }
+
+  &__inner {
+    padding-bottom: 70px;
+    @include mq-max(xs) {
+      padding-bottom: 30px;
+    }
+  }
+}

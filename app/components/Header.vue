@@ -10,9 +10,9 @@
     <nav class="Nav">
       <ul class="Nav__list">
         <li class="Nav__item"><NuxtLink to="/">Home</NuxtLink></li>
-        <li class="Nav__item"><NuxtLink to="/">About</NuxtLink></li>
-        <li class="Nav__item"><NuxtLink to="/">Skills</NuxtLink></li>
-        <li class="Nav__item"><NuxtLink to="/">Archive</NuxtLink></li>
+        <li class="Nav__item"><NuxtLink to="/#about">About</NuxtLink></li>
+        <li class="Nav__item"><NuxtLink to="/#skills">Skills</NuxtLink></li>
+        <li class="Nav__item"><NuxtLink to="/archive/">Archive</NuxtLink></li>
       </ul>
     </nav>
 
