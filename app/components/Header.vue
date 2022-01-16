@@ -28,13 +28,13 @@
         </div>
         <ul class="FullscreenMenu__nav">
           <li class="FullscreenMenu__item">
-            <h2 class="FullscreenMenu__title">
+            <h2 class="FullscreenMenu__title" v-on:click="closeMenu">
               <NuxtLink to="/">Home</NuxtLink>
             </h2>
             <ul class="FullscreenMenu__rowNav">
-              <li class="FullscreenMenu__item"><NuxtLink to="/" target="_blank" rel="noopener">About<font-awesome-icon icon="chevron-circle-right" style="font-size: 1em;" /></NuxtLink></li>
-              <li class="FullscreenMenu__item"><NuxtLink to="/" target="_blank" rel="noopener">Skills<font-awesome-icon icon="chevron-circle-right" style="font-size: 1em;" /></NuxtLink></li>
-              <li class="FullscreenMenu__item"><NuxtLink to="/" target="_blank" rel="noopener">Archive<font-awesome-icon icon="chevron-circle-right" style="font-size: 1em;" /></NuxtLink></li>
+              <li class="FullscreenMenu__item" v-on:click="closeMenu"><NuxtLink to="/#about">About<font-awesome-icon icon="chevron-circle-right" style="font-size: 1em;" /></NuxtLink></li>
+              <li class="FullscreenMenu__item" v-on:click="closeMenu"><NuxtLink to="/#skills">Skills<font-awesome-icon icon="chevron-circle-right" style="font-size: 1em;" /></NuxtLink></li>
+              <li class="FullscreenMenu__item" v-on:click="closeMenu"><NuxtLink to="/archive/">Archive<font-awesome-icon icon="chevron-circle-right" style="font-size: 1em;" /></NuxtLink></li>
             </ul>
           </li>
         </ul>
