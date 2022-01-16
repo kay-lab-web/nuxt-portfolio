@@ -17,7 +17,11 @@
 
     &--white {
       background-color: $white;
-      color: $keyColor;
+      color: $blueDark;
+      &:hover {
+        color: $white;
+        background-color: $blueDark;
+      }
     }
   &__wrap {
     text-align: center;

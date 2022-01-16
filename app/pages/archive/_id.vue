@@ -1,5 +1,5 @@
 <template>
-  <div class="Container" id="detail">
+  <div class="Main" id="detail">
     <Header />
     <div class="Section">
       <h1 class="Heading Heading--center">{{items[$route.params.id - 1].title}}</h1>
@@ -8,7 +8,7 @@
         <div class="p-detail__info">
           <span class="p-detail__date">{{items[$route.params.id - 1].date}}</span>
           <div class="p-detail__cat">
-            <span v-for="cat in items[$route.params.id - 1].category" :key="cat.category" :class="'c-label c-label--' + cat">{{cat}}</span>
+            <span v-for="cat in items[$route.params.id - 1].category" :key="cat.category" :class="'Label Label--' + cat">{{cat}}</span>
           </div>
         </div>
 
