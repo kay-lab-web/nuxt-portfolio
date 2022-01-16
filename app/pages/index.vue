@@ -7,9 +7,9 @@
       <section class="Section__inner">
         <h2 class="Heading Heading--center">About</h2>
         <p class="Paragraph">
-          Web制作会社でwebフロントエンドエンジニアとして、地方企業のwebサイトの制作・保守、webアプリケーションの開発・テスト・保守までを4年弱経験した後、
-          飲食Gr.店を運営する企業内のweb担当としてwebデザイン・webフロントエンド・運用を1年程経験して参りました。</p>
-        <p class="Paragraph">webサイト、webシステムに幅広く携わってきた中でも、フロントエンド領域における設計・実装を得意としております。最近では主にNuxt.jsでのフロントエンド開発に取り組んでおります。</p>
+          2016/12より、Web制作会社でwebフロントエンドエンジニアとして、地元広島を中心とする企業のwebサイトの制作・保守、webアプリケーションの開発・テスト・保守までを4年弱経験した後、<br>
+          2020/10より、飲食Gr.店を運営する企業内のwebデザイナー担当としてwebサイトのUXUIデザイン・運用を1年程経験して参りました。</p>
+        <p class="Paragraph">これまでwebサイト、プロダクト、サービスと幅広く携わってきた中でも、UXリサーチ、webサイトデザインを得意としております。</p>
         <div class="Btn__wrap">
           <NuxtLink to="/archive/" class="Btn Btn--keyColor">実績一覧へ</NuxtLink>
         </div>
