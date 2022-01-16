@@ -1,0 +1,19 @@
+.Header {
+  position: fixed;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  max-width: $lg;
+  margin: 0 auto;
+  top: 2rem;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  @include mq-max(content) {
+    max-width: 100%;
+    padding: 0 1rem;// 15px
+  }
+  @include mq-max(lg) {
+    top: 2em;
+  }
+}

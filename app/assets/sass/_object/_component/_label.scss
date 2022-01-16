@@ -1,0 +1,27 @@
+.Label {
+  display: inline-block;
+  font-size: 0.825rem;
+  padding: 3px 5px;
+  margin-right: 5px;
+  border-radius: 5px;
+  line-height: 1;
+  color: $white;
+  background-color: $chacoal;
+}
+
+
+$theme-colors: (
+  Wordpress:  #00A0D2,
+  Vuejs: #3fb27f,
+  BoltCMS: #3c5a7e,
+  Angular: #BD002E,
+  MovableType: #002666,
+  Design: #c66394,
+);
+
+// 使うときは↓こう（each利用）
+@each $key, $color in $theme-colors {
+  .Label--#{$key} {
+      background-color: $color;
+  }
+}

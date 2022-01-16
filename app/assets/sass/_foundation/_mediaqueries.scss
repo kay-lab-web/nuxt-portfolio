@@ -1,0 +1,17 @@
+@mixin mq-max($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin mq-min($breakpoint: md) {
+@media #{map-get($breakpoints, $breakpoint)} {
+  @content;
+}
+}
+
+@mixin darkmode {
+@media (prefers-color-scheme: dark) {
+  @content;
+}
+}
