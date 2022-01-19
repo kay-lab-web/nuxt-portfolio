@@ -100,6 +100,7 @@
         postItem: "",
         checkedCareer: '',
         checkedCategory: [],
+        articleType: null,
         items: [
           {
             id: 1,
@@ -108,6 +109,7 @@
             type: "nishimura", // nishimura, phonogram, personal
             category: ["Design","Wordpress"],
             subtitle: "東広島市の料亭を",
+            articleType: 1,
             description: "東広島市の料亭",
             feature01: "女性を主にターゲットにした単価がやや高めの料理店で、写真を主に店舗のイメージが伝わりやすいwebサイトを心掛けました。",
             feature02: "前任のデザイナーが退職済みで、開発が中止していた制作案件を引き継ぐ形で制作いたしました。wordpressの固定ページ機能に直でコーディングしていたものが制作のボトルネックになっていたため、一度タスクランナー(Node.js)の導入から着手いたしました。",
