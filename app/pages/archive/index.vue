@@ -58,8 +58,10 @@
             </div>
 
             <div class="Box__checkboxWrap" v-if="checkedCareer == 'nishimura'">
-              <input class="Checkbox" type="checkbox" name="checkedCategory" value="UI/UX" v-model="checkedCategory" id="cat_ui">
-              <label class="Checkbox__label" for="cat_ui">UI/UX</label>
+              <input class="Checkbox" type="checkbox" name="checkedCategory" value="UX" v-model="checkedCategory" id="cat_ux">
+              <label class="Checkbox__label" for="cat_ux">UX</label>
+              <input class="Checkbox" type="checkbox" name="checkedCategory" value="UI" v-model="checkedCategory" id="cat_ui">
+              <label class="Checkbox__label" for="cat_ui">UI</label>
               <input class="Checkbox" type="checkbox" name="checkedCategory" value="Design" v-model="checkedCategory" id="cat_design">
               <label class="Checkbox__label" for="cat_design">Design</label>
               <input class="Checkbox" type="checkbox" name="checkedCategory" value="Wordpress" v-model="checkedCategory" id="cat_wordpress">
@@ -107,9 +109,9 @@
             date: "2021/09",
             title: "活けす料理 水軍の郷",
             type: "nishimura", // nishimura, phonogram, personal
-            category: ["Design","Wordpress"],
             subtitle: "東広島市の料亭を",
             articleType: 1,
+            category: ["UX","Design"],
             description: "東広島市の料亭",
             feature01: "女性を主にターゲットにした単価がやや高めの料理店で、写真を主に店舗のイメージが伝わりやすいwebサイトを心掛けました。",
             feature02: "前任のデザイナーが退職済みで、開発が中止していた制作案件を引き継ぐ形で制作いたしました。wordpressの固定ページ機能に直でコーディングしていたものが制作のボトルネックになっていたため、一度タスクランナー(Node.js)の導入から着手いたしました。",
@@ -123,7 +125,7 @@
             date: "2020/12",
             title: "炉 本通り 然然",
             type: "nishimura", // nishimura, phonogram, personal
-            category: ["Design","UI/UX","Wordpress"],
+            category: ["UI","Design"],
             subtitle: "2020年6月開店 広島中心地の話題店",
             description: "2020年6月開店 広島中心地の話題店",
             feature01: "女性を主にターゲットにした単価がやや高めの料理店で、写真を主軸に店舗のイメージが伝わりやすいwebサイトを心掛けました。",
