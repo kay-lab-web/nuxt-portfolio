@@ -1,86 +1,87 @@
 <template>
   <div class="Main">
     <Header />
-
-    <div class="Section Section--lower" id="archives">
-      <h1 class="Heading Heading--center">
-        <span class="Heading__subtitle">Archives</span>実績一覧
-      </h1>
-      <div>
-        <div class="Box">
-          <h2 class="Box__title">経歴別で絞り込む</h2>
-          <div class="Box__row">
-            <div class="Radio__wrap">
-              <input class="Radio" type="radio" name="checkedCareer" value="nishimura" v-model="checkedCareer" id="cat_nishimura">
-              <label class="Radio__label" for="cat_nishimura">
-                <span class="Radio__text">
-                  株式会社 西村<span class="Radio__date">2020/10～</span>
-                </span>
-              </label>
-            </div>
-            <div class="Radio__wrap">
-              <input class="Radio" type="radio" name="checkedCareer" value="phonogram" v-model="checkedCareer" id="cat_phonogram">
-              <label class="Radio__label" for="cat_phonogram">
-                <span class="Radio__text">
-                  株式会社 フォノグラム<span class="Radio__date">2016/12～2020/10</span>
-                </span>
-              </label>
-            </div>
-          </div>
-          <h2 class="Box__title" v-if="checkedCareer == 'phonogram' || checkedCareer == 'nishimura'">カテゴリ別で絞り込む</h2>
-          <div class="Box__row" v-if="checkedCareer == 'phonogram' || checkedCareer == 'nishimura'">
-            <div class="Box__checkboxWrap" v-if="checkedCareer == 'phonogram'">
-              <input class="Checkbox" type="checkbox" name="checkedCategory" value="Corporate" v-model="checkedCategory" id="cat_corporate">
-              <label class="Checkbox__label" for="cat_corporate">Corporate</label>
-              <input class="Checkbox" type="checkbox" name="checkedCategory" value="Recruit" v-model="checkedCategory" id="cat_recruit">
-              <label class="Checkbox__label" for="cat_recruit">Recruit</label>
-              <input class="Checkbox" type="checkbox" name="checkedCategory" value="Service" v-model="checkedCategory" id="cat_service">
-              <label class="Checkbox__label" for="cat_service">Service</label>
-              <input class="Checkbox" type="checkbox" name="checkedCategory" value="Security" v-model="checkedCategory" id="cat_security">
-              <label class="Checkbox__label" for="cat_security">Security</label>
-              <input class="Checkbox" type="checkbox" name="checkedCategory" value="CRM" v-model="checkedCategory" id="cat_crm">
-              <label class="Checkbox__label" for="cat_crm">CRM</label>
-              <input class="Checkbox" type="checkbox" name="checkedCategory" value="Brand" v-model="checkedCategory" id="cat_brand">
-              <label class="Checkbox__label" for="cat_brand">Brand</label>
-              <input class="Checkbox" type="checkbox" name="checkedCategory" value="Vuejs" v-model="checkedCategory" id="cat_vue">
-              <label class="Checkbox__label" for="cat_vue">Vue.js</label>
-
-              <input class="Checkbox" type="checkbox" name="checkedCategory" value="SPA" v-model="checkedCategory" id="cat_spa">
-              <label class="Checkbox__label" for="cat_spa">SPA</label>
-              <input class="Checkbox" type="checkbox" name="checkedCategory" value="Angular" v-model="checkedCategory" id="cat_angular">
-              <label class="Checkbox__label" for="cat_angular">Angular</label>
-              <input class="Checkbox" type="checkbox" name="checkedCategory" value="Wordpress" v-model="checkedCategory" id="cat_wordpress">
-              <label class="Checkbox__label" for="cat_wordpress">Wordpress</label>
-              <input class="Checkbox" type="checkbox" name="checkedCategory" value="BoltCMS" v-model="checkedCategory" id="cat_bolt">
-              <label class="Checkbox__label" for="cat_bolt">Bolt CMS</label>
-              <input class="Checkbox" type="checkbox" name="checkedCategory" value="MovableType" v-model="checkedCategory" id="cat_mt">
-              <label class="Checkbox__label" for="cat_mt">MovableType</label>
-            </div>
-
-            <div class="Box__checkboxWrap" v-if="checkedCareer == 'nishimura'">
-              <input class="Checkbox" type="checkbox" name="checkedCategory" value="UI/UX" v-model="checkedCategory" id="cat_ui">
-              <label class="Checkbox__label" for="cat_ui">UI/UX</label>
-              <input class="Checkbox" type="checkbox" name="checkedCategory" value="Design" v-model="checkedCategory" id="cat_design">
-              <label class="Checkbox__label" for="cat_design">Design</label>
-              <input class="Checkbox" type="checkbox" name="checkedCategory" value="Wordpress" v-model="checkedCategory" id="cat_wordpress">
-              <label class="Checkbox__label" for="cat_wordpress">Wordpress</label>
-            </div>
-          </div>
-        </div>
-
-        <ul class="Card">
-          <li class="Card__item" v-for="item in matched" :key="item.id" @click="move(item.id)">
-            <img :src="item.imgSrc" alt="">
-            <div class="Card__body">
-              <div class="Card__modules">
-                <span class="Card__date">{{ item.date }}</span><br>
-                <span v-for="i in item.category" :key="i" :class="'Label Label--' + i " >{{ i }}</span>
+    <div class="Contents">
+      <div class="Section Section--lower" id="archives">
+        <h1 class="Heading Heading--center">
+          <span class="Heading__subtitle">Archives</span>実績一覧
+        </h1>
+        <div>
+          <div class="Box">
+            <h2 class="Box__title">経歴別で絞り込む</h2>
+            <div class="Box__row">
+              <div class="Radio__wrap">
+                <input class="Radio" type="radio" name="checkedCareer" value="nishimura" v-model="checkedCareer" id="cat_nishimura">
+                <label class="Radio__label" for="cat_nishimura">
+                  <span class="Radio__text">
+                    株式会社 西村<span class="Radio__date">2020/10～</span>
+                  </span>
+                </label>
               </div>
-              <h2 class="Card__title">{{ item.title }}</h2>
-              <p class="Card__subtitle">{{ item.subtitle }}</p>
+              <div class="Radio__wrap">
+                <input class="Radio" type="radio" name="checkedCareer" value="phonogram" v-model="checkedCareer" id="cat_phonogram">
+                <label class="Radio__label" for="cat_phonogram">
+                  <span class="Radio__text">
+                    株式会社 フォノグラム<span class="Radio__date">2016/12～2020/10</span>
+                  </span>
+                </label>
+              </div>
             </div>
-          </li>
-        </ul>
+            <h2 class="Box__title" v-if="checkedCareer == 'phonogram' || checkedCareer == 'nishimura'">カテゴリ別で絞り込む</h2>
+            <div class="Box__row" v-if="checkedCareer == 'phonogram' || checkedCareer == 'nishimura'">
+              <div class="Box__checkboxWrap" v-if="checkedCareer == 'phonogram'">
+                <input class="Checkbox" type="checkbox" name="checkedCategory" value="Corporate" v-model="checkedCategory" id="cat_corporate">
+                <label class="Checkbox__label" for="cat_corporate">Corporate</label>
+                <input class="Checkbox" type="checkbox" name="checkedCategory" value="Recruit" v-model="checkedCategory" id="cat_recruit">
+                <label class="Checkbox__label" for="cat_recruit">Recruit</label>
+                <input class="Checkbox" type="checkbox" name="checkedCategory" value="Service" v-model="checkedCategory" id="cat_service">
+                <label class="Checkbox__label" for="cat_service">Service</label>
+                <input class="Checkbox" type="checkbox" name="checkedCategory" value="Security" v-model="checkedCategory" id="cat_security">
+                <label class="Checkbox__label" for="cat_security">Security</label>
+                <input class="Checkbox" type="checkbox" name="checkedCategory" value="CRM" v-model="checkedCategory" id="cat_crm">
+                <label class="Checkbox__label" for="cat_crm">CRM</label>
+                <input class="Checkbox" type="checkbox" name="checkedCategory" value="Brand" v-model="checkedCategory" id="cat_brand">
+                <label class="Checkbox__label" for="cat_brand">Brand</label>
+                <input class="Checkbox" type="checkbox" name="checkedCategory" value="Vuejs" v-model="checkedCategory" id="cat_vue">
+                <label class="Checkbox__label" for="cat_vue">Vue.js</label>
+
+                <input class="Checkbox" type="checkbox" name="checkedCategory" value="SPA" v-model="checkedCategory" id="cat_spa">
+                <label class="Checkbox__label" for="cat_spa">SPA</label>
+                <input class="Checkbox" type="checkbox" name="checkedCategory" value="Angular" v-model="checkedCategory" id="cat_angular">
+                <label class="Checkbox__label" for="cat_angular">Angular</label>
+                <input class="Checkbox" type="checkbox" name="checkedCategory" value="Wordpress" v-model="checkedCategory" id="cat_wordpress">
+                <label class="Checkbox__label" for="cat_wordpress">Wordpress</label>
+                <input class="Checkbox" type="checkbox" name="checkedCategory" value="BoltCMS" v-model="checkedCategory" id="cat_bolt">
+                <label class="Checkbox__label" for="cat_bolt">Bolt CMS</label>
+                <input class="Checkbox" type="checkbox" name="checkedCategory" value="MovableType" v-model="checkedCategory" id="cat_mt">
+                <label class="Checkbox__label" for="cat_mt">MovableType</label>
+              </div>
+
+              <div class="Box__checkboxWrap" v-if="checkedCareer == 'nishimura'">
+                <input class="Checkbox" type="checkbox" name="checkedCategory" value="UX" v-model="checkedCategory" id="cat_ux">
+                <label class="Checkbox__label" for="cat_ux">UX</label>
+                <input class="Checkbox" type="checkbox" name="checkedCategory" value="UI" v-model="checkedCategory" id="cat_ui">
+                <label class="Checkbox__label" for="cat_ui">UI</label>
+                <input class="Checkbox" type="checkbox" name="checkedCategory" value="Design" v-model="checkedCategory" id="cat_design">
+                <label class="Checkbox__label" for="cat_design">Design</label>
+              </div>
+            </div>
+          </div>
+
+          <ul class="Card">
+            <li class="Card__item" v-for="item in matched" :key="item.id" @click="move(item.id)">
+              <img :src="item.imgSrc" alt="">
+              <div class="Card__body">
+                <div class="Card__modules">
+                  <span class="Card__date">{{ item.date }}</span><br>
+                  <span v-for="i in item.category" :key="i" :class="'Label Label--' + i " >{{ i }}</span>
+                </div>
+                <h2 class="Card__title">{{ item.title }}</h2>
+                <p class="Card__subtitle">{{ item.subtitle }}</p>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -94,21 +95,37 @@
 <script>
   export default {
     name: 'Parent',
-    el: '#archives',
     data: () => {
       return {
         postItem: "",
         checkedCareer: '',
         checkedCategory: [],
+        articleType: null,
         items: [
           {
             id: 1,
-            date: "2021/09",
+            date: "2021/11~",
+            title: "かき小屋 宇品店",
+            type: "nishimura", // nishimura, phonogram, personal
+            articleType: 1,
+            category: ["UX","Design"],
+            subtitle: "穴場観光地のUXリサーチ＆webサイトリニューアル",
+            overview01: "かき小屋宇品店は広島県の実証事業である「瀬戸内 海の道構想」を基に、気軽に・手軽に牡蠣を食べることができる場所（通称：かき小屋）の提供を行っている「ひろしまオイスターロード」の系列店のうちの1店舗です。",
+            overview02: "今回、webサイトリニューアルにあたり、UX領域では定量調査・定性調査の可視化からペルソナとカスタマージャーニーマップの作成、それらに基づいたwebデザインを担当いたしました。",
+            feature01: "",
+            feature02: "",
+            imgSrc: require("~/assets/images/img_archive_hiroshima-oyster.jpg"),
+            detailSrc: require("~/assets/images/img_detail_hiroshima-oyster.png"),
+            anchor: "https://suigunnosato.com/",
+          },
+          {
+            id: 2,
+            date: "2021/09~",
             title: "活けす料理 水軍の郷",
             type: "nishimura", // nishimura, phonogram, personal
-            category: ["Design","Wordpress"],
-            subtitle: "東広島市の料亭を",
-            description: "東広島市の料亭",
+            articleType: 1,
+            category: ["UX","Design"],
+            subtitle: "酒処 東広島市西条の料亭の主力商品を打ち出した店舗サイトリニューアル",
             feature01: "女性を主にターゲットにした単価がやや高めの料理店で、写真を主に店舗のイメージが伝わりやすいwebサイトを心掛けました。",
             feature02: "前任のデザイナーが退職済みで、開発が中止していた制作案件を引き継ぐ形で制作いたしました。wordpressの固定ページ機能に直でコーディングしていたものが制作のボトルネックになっていたため、一度タスクランナー(Node.js)の導入から着手いたしました。",
             // results: "地元メディア(ローカルTV番組・地元紙)やカード系会社様のパンフレットに継続してメディア掲載を取り上げて頂いております。",
@@ -117,13 +134,13 @@
             anchor: "https://suigunnosato.com/",
           },
           {
-            id: 2,
-            date: "2020/12",
+            id: 3,
+            date: "2020/12~",
             title: "炉 本通り 然然",
             type: "nishimura", // nishimura, phonogram, personal
-            category: ["Design","UI/UX","Wordpress"],
+            articleType: 1,
+            category: ["UI","Design"],
             subtitle: "2020年6月開店 広島中心地の話題店",
-            description: "2020年6月開店 広島中心地の話題店",
             feature01: "女性を主にターゲットにした単価がやや高めの料理店で、写真を主軸に店舗のイメージが伝わりやすいwebサイトを心掛けました。",
             feature02: "前任のデザイナーが退職済みで、制作が中止していた案件を引き継ぐ形で制作いたしました。引継ぎ当初はwordpressの固定ページ機能に直でコーディングしていたものがボトルネックになっていたため、一度Node.jsの導入から着手いたしました。",
             results: "地元メディア(ローカルTV番組・地元紙)やカード系会社様のパンフレットに継続してメディア掲載を取り上げて頂いております。",
@@ -132,7 +149,7 @@
             anchor: "https://irori-sasa.jp/",
           },
           {
-            id: 3,
+            id: 4,
             date: "2020/08",
             title: "医療法人 せいわ会",
             type: "phonogram",
@@ -147,7 +164,7 @@
             anchor: "https://hirochu-rh.jp/",
           },
           {
-            id: 4,
+            id: 5,
             date: "2020/04",
             title: "マツダ株式会社",
             type: "phonogram",
@@ -161,7 +178,7 @@
             anchor: null,
           },
           {
-            id: 5,
+            id: 6,
             date: "2019/09",
             title: "ひろしま美術館",
             type: "phonogram",
@@ -174,7 +191,7 @@
             anchor: "https://www.hiroshima-museum.jp/",
           },
           {
-            id: 6,
+            id: 7,
             date: "2019/05",
             title: "近畿日本ツーリスト中国四国",
             type: "phonogram",
@@ -187,7 +204,7 @@
             anchor: "https://www.kntcs.co.jp/",
           },
           {
-            id: 7,
+            id: 8,
             date: "2019/03",
             title: "近畿日本ツーリスト中国四国",
             type: "phonogram",
@@ -200,7 +217,7 @@
             anchor: "https://www.kntcs.co.jp/",
           },
           {
-            id: 8,
+            id: 9,
             date: "2018/12",
             title: "Sen社会保険労務士法人",
             type: "phonogram",
@@ -214,7 +231,7 @@
             anchor: "https://socio-sr.com/",
           },
           {
-            id: 9,
+            id: 10,
             date: "2018/11",
             title: "株式会社エムネス",
             type: "phonogram",
@@ -228,12 +245,12 @@
             anchor: "https://phr.lookrec.com/login-ja.html",
           },
           {
-            id: 10,
+            id: 11,
             date: "2018/08",
             title: "株式会社アババイ",
             type: "phonogram",
             category: ["BoltCMS","Corporate","CRM"],
-            subtitle: "CRMと連携したCMSテーマの開発",
+            subtitle: "CRMと連携したオリジナルCMSテーマの開発",
             description: "名古屋に本社を置く建築業界のWebサイトに特化したWeb制作会社、<a href='https://ababai.co.jp/' target='_blank' rel='noopener'>アババイ</a>様の業務用CMS&CRM（通称:「アバラック2」）を制作いたしました。",
             feature01: "海外CMSの「Bolt CMS」を利用し、Webに明るくない建築会社様・工務店様でも簡単にWebサイトを更新し、「イベント」や「お知らせ」の情報をエンドユーザーに向けて発信できる機能を構築いたしました。",
             results: "アババイ様のコーポレートサイトをはじめ、全国の建築事業者のWebサイトに開発した製品が使用されております。<br><br>【参考】<br><a href='https://ababai.co.jp/case_cat/case01/' target='_blank' rel='noopener'>株式会社アババイ - 制作実績</a>",
@@ -242,12 +259,12 @@
             anchor: "https://ababai.co.jp/",
           },
           {
-            id: 11,
+            id: 12,
             date: "2018/03",
             title: "株式会社サタケ",
             type: "phonogram",
             category: ["Brand"],
-            subtitle: "ブランドサイトのフロントエンド設計&実装",
+            subtitle: "ブランドサイトのフロントエンド",
             description: "精米機メーカーのサタケ様のブランドサイトをシングルページWebサイトとして制作いたしました。<br>サタケ様の長い歴史を1ページで振り返り、求職者の方に向けて訴求しております。",
             feature01: "主に担当したのはフロントエンドでの設計です。<br>JQueryプラグインの選定とスクリプト関連のベースコーディング・他のコーダーへの作業指示出し等を行いました。",
             imgSrc: require("~/assets/images/img_archive_satake-brand.jpg"),
@@ -255,12 +272,12 @@
             anchor: "https://satake-japan.co.jp/brand/",
           },
           {
-            id: 12,
+            id: 13,
             date: "2018/03",
             title: "株式会社サタケ",
             type: "phonogram",
             category: ["MovableType","Corporate","Renewal"],
-            subtitle: "コーポレートサイトリニューアル",
+            subtitle: "中規模コーポレートサイトリニューアル",
             description: "精米機メーカーのサタケ様のコーポレートサイトをリニューアルいたしました。リニューアルするにあたり、MovableTypeの組み込みと各ブログの構築を担当いたしました。",
             feature01: "リニューアル以前は約300ページ程度の静的ファイルで作成されていた「製品情報」ページ群を、MovableTypeの「製品ブログ」の記事としてまとめました。Webスクレイピングで技術検証を行い、プログラミングで記事作成数時の工数を削減できるかどうかの調査を実施。開発も担当させていただきました。",
             feature02: "加えて、「お知らせ」ブログの開発も担当させていただきました、約10年も運用を続けているWebサイトのため、記事の情報を「簡潔に・わかりやすく」まとめ、ストレスの少ない運用・閲覧ができるように開発しております。",
@@ -269,7 +286,7 @@
             anchor: "https://satake-japan.co.jp/",
           },
           {
-            id: 13,
+            id: 14,
             date: "2018/02",
             title: "エネルギア・コミュニケーションズ",
             type: "phonogram",

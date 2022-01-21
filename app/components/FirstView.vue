@@ -3,9 +3,9 @@
     <div class="Firstview">
       <div class="Firstview__inner">
         <h1 class="Firstview__title">Portfolio Site</h1>
-        <p class="Firstview__scope">WebSite / Web Application / CMS  / Front-end </p>
+        <p class="Firstview__scope">WebSite / Web Application / CMS <br> UXUI / WebDesign / Front-end </p>
         <div class="Firstview__decoration"></div>
-        <div class="Firstview__copy">URL HERE!</div>
+        <div class="Firstview__copy">https://dreamy-mayer-b9da33.netlify.app/</div>
       </div>
     </div>
   </div>
