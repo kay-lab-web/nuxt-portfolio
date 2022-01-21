@@ -77,7 +77,6 @@
         > img {
           border-radius: 1rem;
           margin-bottom: 1rem;
-
         }
       }
     }
@@ -95,5 +94,17 @@
     @include mq-max(xs) {
       margin: 1rem 0 0;
     }
+  }
+}
+
+.Overview {
+  display: flex;
+  flex-direction: row;
+  &__head {
+    font-weight: 700;
+    width: 15rem;
+  }
+  &__paragraph {
+    margin-bottom: 0.666rem;
   }
 }
