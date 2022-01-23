@@ -3,9 +3,10 @@
     <Header />
     <div class="Contents">
       <div class="Section Section--lower" id="archives">
-        <h1 class="Heading Heading--center">
+        <h1 class="Heading Heading--archive">
           <span class="Heading__subtitle">Archives</span>実績一覧
         </h1>
+
         <div>
           <div class="Box">
             <h2 class="Box__title">経歴別で絞り込む</h2>
@@ -109,14 +110,25 @@
             type: "nishimura", // nishimura, phonogram, personal
             articleType: 1,
             category: ["UX","Design"],
-            subtitle: "穴場観光地のUXリサーチ＆webサイトリニューアル",
+            subtitle: "穴場観光地のUXリサーチ＆webデザインリニューアル",
             overview01: "かき小屋宇品店は広島県の実証事業である「瀬戸内 海の道構想」を基に、気軽に・手軽に牡蠣を食べることができる場所（通称：かき小屋）の提供を行っている「ひろしまオイスターロード」の系列店のうちの1店舗です。",
-            overview02: "今回、webサイトリニューアルにあたり、UX領域では定量調査・定性調査の可視化からペルソナとカスタマージャーニーマップの作成、それらに基づいたwebデザインを担当いたしました。",
-            feature01: "",
-            feature02: "",
+            overview02: "今回、webサイトリニューアルにあたり、UX領域では定量調査・定性調査からペルソナとカスタマージャーニーマップの作成、それらに基づいたwebデザインを担当いたしました。",
+            title01: "かき小屋宇品店を再定義する",
+            description01: "今回、かき小屋宇品店のデザインリニューアルに要した期間は1.5人月。<br>私の上司である営業部長より、「webサイトが古くなり、導線が分かり難くなっているのでなんとかしてほしい」といった要望を頂いたことからはじまりました。",
+            title02: "現状分析・可視化を行い、課題を抽出する",
+            description02: "そこで、私がまず最初に取り掛かったのはかき小屋宇品店のリサーチです。<br>かき小屋宇品店のビジネスや、株式会社西村のグループ店や他のかき小屋との立ち位置・ユーザーとの接点を可視化し、より深く理解するのが目的です。<br><br>定性調査の面では、Googleプロフィールマネージャーでの口コミの調査やGoogle Search Consoleでのwebサイトへの流入キーワードの分析をはじめ、営業部長と「かき小屋宇品店」の店長へ対し、来客層に関するヒアリングを行いました。<br><br>また、ペルソナの策定とカスタマージャーニーマップの作成にも取り組み、「かき小屋 宇品店」の現状と課題を明確にいたしました。",
+            title03: "",
+            description03: "調査結果から、推定される「かき小屋 宇品店」の現状と課題点は以下のことがわかりました。<br><br><ul class='List List--disc'><li class='List__item'>ユーザーの中でも口コミでのシェアや売上の貢献を担っているのは、週末に来客する家族層が多い</li><li class='List__item'>ユーザーと「かき小屋宇品店」のタッチポイントは既に多い反面、webサイトがうまく活用できておらず「かき小屋宇品店」の特徴が分かりづらい。</li></ul><br><br>",
+            title04: "リサーチ結果からwebデザインを策定する",
+            description04: "リサーチから週末に来客する家族層に向けてのデザインを作成するにあたり、メンフィスを選定いたしました。レトロリバイバルとして注目されたメンフィスデザインですが、今回選定した理由としては、<br><br><ul class='List List--disc'><li class='List__item'>図形やパターンを基調にしたポップなデザインが家族層のなかでも子どもにマッチすると仮定</li><li class='List__item'>キャラクターデザインやイラストとも相性が良い</li></ul><br>上記の理由からメンフィスデザインを採用いたしました。<br>カスタマージャーニーマップから「かき小屋宇品店」の特徴が打ち出せていないことから、トップページに「かき小屋宇品店」の特徴を分かりやすく打ち出すレイアウトにいたしました。",
+            image01: require("~/assets/images/img_item01_hiroshima-oyster.jpg"),
+            image02: require("~/assets/images/img_item02_hiroshima-oyster.jpg"),
+            image03: "",
+            image04: "",
             imgSrc: require("~/assets/images/img_archive_hiroshima-oyster.jpg"),
             detailSrc: require("~/assets/images/img_detail_hiroshima-oyster.png"),
-            anchor: "https://suigunnosato.com/",
+            btnText: "webデザインはこちら",
+            anchor: "https://xd.adobe.com/view/6e832938-499b-4683-a03c-444a811b8e25-3bd0/",
           },
           {
             id: 2,
@@ -131,6 +143,7 @@
             // results: "地元メディア(ローカルTV番組・地元紙)やカード系会社様のパンフレットに継続してメディア掲載を取り上げて頂いております。",
             imgSrc: require("~/assets/images/img_archive_suigunnosato.jpg"),
             detailSrc: require("~/assets/images/img_detail_suigunnosato.png"),
+            btnText: "webサイトはこちら",
             anchor: "https://suigunnosato.com/",
           },
           {
@@ -146,6 +159,7 @@
             results: "地元メディア(ローカルTV番組・地元紙)やカード系会社様のパンフレットに継続してメディア掲載を取り上げて頂いております。",
             imgSrc: require("~/assets/images/img_archive_irori-sasa.jpg"),
             detailSrc: require("~/assets/images/img_detail_irori-sasa.png"),
+            btnText: "webサイトはこちら",
             anchor: "https://irori-sasa.jp/",
           },
           {
@@ -161,6 +175,7 @@
             results: "公開1か月で10件もの採用問い合わせ達成。\r\nCV率1.7%と、上々の滑り出しとなりました。",
             imgSrc: require("~/assets/images/img_archive_hirochu-rh.jpg"),
             detailSrc: require("~/assets/images/img_detail_hirochu-rh.png"),
+            btnText: "webサイトはこちら",
             anchor: "https://hirochu-rh.jp/",
           },
           {
@@ -175,6 +190,7 @@
             feature02: "弊社が開発したソースコードを納品後、クライアント様の作業ミスでWordpressが本番環境で正常に動作しない不具合に対応する場面がありました。サーバー関連の知識を要する対応のため、これまでのWordpressの制作案件で培ってきたノウハウが活かせた仕事となりました。",
             imgSrc: require("~/assets/images/img_archive_mazda.jpg"),
             detailSrc: require("~/assets/images/img_detail_mazda.png"),
+            btnText: "webサイトはこちら",
             anchor: null,
           },
           {
@@ -188,6 +204,7 @@
             feature01: "サイトリニューアルに加え、web担当者様のご要望に合わせ、先方でも展示品の新規ページ制作が行えるよう、Dreamweaverを使用したベースコーディングを行いました。\r\nそのため、簡単にページ制作が行えるようDreamweaverのテンプレートファイルの設計も行っております。",
             imgSrc: require("~/assets/images/img_archive_hiroshima-museum.jpg"),
             detailSrc: require("~/assets/images/img_detail_hiroshima-museum.png"),
+            btnText: "webサイトはこちら",
             anchor: "https://www.hiroshima-museum.jp/",
           },
           {
@@ -201,6 +218,7 @@
             feature01: "デザインの刷新に伴い、オリジナルテーマでの制作を行いました。\r\nまた、リニューアル前では脆弱性が発見されたバージョンのWordpressが既にインストールされていたため、Wordpress本体ファイルのアップデートを行い、既存ブログの整理、リニューアル前の記事データの移行作業を行っております。",
             imgSrc: require("~/assets/images/img_archive_kntcs.jpg"),
             detailSrc: require("~/assets/images/img_detail_kntcs.png"),
+            btnText: "webサイトはこちら",
             anchor: "https://www.kntcs.co.jp/",
           },
           {
@@ -214,6 +232,7 @@
             feature01: "クライアント様のご要望により、Wordpressのセキュリティ対策を行いました。IPAから勧告されていたセキュリティ情報を基に、Wordpress4.7.xバージョンの標準セキュリティ対策を実施しております。\r\n \r\n【参考】\r\n 『WordPress の脆弱性対策について』- IPA 情報処理推進機構\r\n( https://www.ipa.go.jp/security/ciadr/vul/20170206-wordpress.html )\r\n\r\n IPAテクニカルウォッチ - 『CMSを用いたウェブサイトにおける情報セキュリティ対策のポイント』\r\n( https://www.ipa.go.jp/files/000054743.pdf ) ",
             imgSrc: require("~/assets/images/img_archive_kntcs.jpg"),
             detailSrc: require("~/assets/images/img_detail_kntcs.png"),
+            btnText: "webサイトはこちら",
             anchor: "https://www.kntcs.co.jp/",
           },
           {
@@ -228,6 +247,7 @@
             results: "リニューアル前と比較し、アクセス数3倍に。",
             imgSrc: require("~/assets/images/img_archive_socio-sr.jpg"),
             detailSrc: require("~/assets/images/img_detail_socio-sr.png"),
+            btnText: "webサイトはこちら",
             anchor: "https://socio-sr.com/",
           },
           {
@@ -242,6 +262,7 @@
             results: "各メディア（Web・民法）、Google社に掲載いただいております。\r\n\r\n<a href='https://www.mnes.org/news/884' target='_blank' rel='noopener'> - 株式会社エムネス「ワールドビジネスサテライトに取り上げていただきました。」</a><br><a href='https://cloud.google.com/blog/ja/topics/customers/mens-app-engine-kubernetes-engine' target='_blank' rel='noopener'> - Google Cloud ブログ</a>",
             imgSrc: require("~/assets/images/img_archive_lookrec.jpg"),
             detailSrc: require("~/assets/images/img_detail_lookrec.png"),
+            btnText: "webサイトはこちら",
             anchor: "https://phr.lookrec.com/login-ja.html",
           },
           {
@@ -256,6 +277,7 @@
             results: "アババイ様のコーポレートサイトをはじめ、全国の建築事業者のWebサイトに開発した製品が使用されております。<br><br>【参考】<br><a href='https://ababai.co.jp/case_cat/case01/' target='_blank' rel='noopener'>株式会社アババイ - 制作実績</a>",
             imgSrc: require("~/assets/images/img_archive_ababai.jpg"),
             detailSrc: require("~/assets/images/img_detail_ababai.png"),
+            btnText: "webサイトはこちら",
             anchor: "https://ababai.co.jp/",
           },
           {
@@ -269,6 +291,7 @@
             feature01: "主に担当したのはフロントエンドでの設計です。<br>JQueryプラグインの選定とスクリプト関連のベースコーディング・他のコーダーへの作業指示出し等を行いました。",
             imgSrc: require("~/assets/images/img_archive_satake-brand.jpg"),
             detailSrc: require("~/assets/images/img_detail_satake-brand.png"),
+            btnText: "webサイトはこちら",
             anchor: "https://satake-japan.co.jp/brand/",
           },
           {
@@ -283,6 +306,7 @@
             feature02: "加えて、「お知らせ」ブログの開発も担当させていただきました、約10年も運用を続けているWebサイトのため、記事の情報を「簡潔に・わかりやすく」まとめ、ストレスの少ない運用・閲覧ができるように開発しております。",
             imgSrc: require("~/assets/images/img_archive_satake-co.jpg"),
             detailSrc: require("~/assets/images/img_detail_satake-co.png"),
+            btnText: "webサイトはこちら",
             anchor: "https://satake-japan.co.jp/",
           },
           {
@@ -297,6 +321,7 @@
             feature02: "また、リニューアルに伴い「料金シミュレーション」ページの作成をVue.jsで行いました。利用者側にとってわかりにくい料金プランをわかりやすく。Vus.jsでの開発とシステムの連携を行いました。",
             imgSrc: require("~/assets/images/img_archive_megaegg.jpg"),
             detailSrc: require("~/assets/images/img_detail_megaegg.png"),
+            btnText: "webサイトはこちら",
             anchor: "https://www.megaegg.jp/service/fiber/plan.html",
           },
         ]

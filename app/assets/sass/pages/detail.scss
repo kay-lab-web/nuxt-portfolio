@@ -2,6 +2,14 @@
 @import "../_foundation/variables";
 @import "../_foundation/mediaqueries";
 
+.Heading {
+  &--detail {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+  }
+}
+
 .Detail {
 
   &__head {
@@ -10,7 +18,7 @@
     color: $txtColor;
     line-height: 1.5;
     @include mq-max(xs) {
-      font-size: 1.25rem;
+      font-size: 1.5rem;
     }
   }
 
@@ -66,19 +74,31 @@
 
   &--col {
     .Detail {
-      &__contents {
-        width: 100%;
+      &__head {
+        font-weight: 700;
       }
       &__inner {
-        display: flex;
-        flex-direction: column;
+        max-width: $sm;
+        margin: 0 auto 2rem;
+        padding: 1rem 0;
       }
-      &__images {
+      &__image {
+        display: flex;
+        margin-bottom: 2rem;
+        &--right {
+          justify-content: flex-end;
+        }
         > img {
-          border-radius: 1rem;
-          margin-bottom: 1rem;
+          max-width: $sm;
+          @include mq-max(xs) {
+            max-width: 100%;
+          }
         }
       }
+    }
+    img {
+      border-radius: 1rem;
+      margin-bottom: 1rem;
     }
   }
 
@@ -100,11 +120,12 @@
 .Overview {
   display: flex;
   flex-direction: row;
+  margin-bottom: 4rem;
   &__head {
     font-weight: 700;
     width: 15rem;
   }
-  &__paragraph {
+  &__text {
     margin-bottom: 0.666rem;
   }
 }

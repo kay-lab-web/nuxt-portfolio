@@ -19,16 +19,17 @@
     <div class="Section Section--skills" id="skills">
       <h2 class="Heading Heading--center">Skills</h2>
 
-      <h3 class="Heading Heading--small Heading--center">Front-end</h3>
+      <h3 class="Heading Heading--small Heading--center">Design</h3>
       <div class="Bnr">
-          <img src="~/assets/images/logo-nuxt.png" alt="">
-          <img src="~/assets/images/logo-sass.png" alt=""><br>
           <img src="~/assets/images/logo-xd.png" alt="">
           <img src="~/assets/images/logo-ps.png" alt="">
+          <img src="~/assets/images/logo-ai.png" alt="">
       </div>
 
-      <h3 class="Heading Heading--small Heading--center">Tools</h3>
+      <h3 class="Heading Heading--small Heading--center">Front-end</h3>
       <div class="Bnr">
+        <img src="~/assets/images/logo-nuxt.png" alt="">
+        <img src="~/assets/images/logo-sass.png" alt="">
         <img src="~/assets/images/logo-node-js.png" alt="">
         <img src="~/assets/images/logo-netlify.png" alt="">
       </div>

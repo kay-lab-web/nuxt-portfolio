@@ -3,3 +3,16 @@
 
 @import "../_object/_project/p-card";
 @import "../_object/_project/p-formparts";
+
+.Heading {
+  &--archive {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    .Heading__subtitle {
+      font-size: 2rem;
+      padding-left: 0.25rem;
+    }
+  }
+}
