@@ -1,0 +1,19 @@
+.List {
+  &--disc {
+    list-style: none;
+    .List__item {
+      position: relative;
+      padding-left: 1.5rem;
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0.65rem;
+        left: 0.5rem;
+        width: 5px;
+        height: 5px;
+        border-radius: 1rem;
+        background-color: $mainColor;
+      }
+    }
+  }
+}

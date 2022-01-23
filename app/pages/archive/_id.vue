@@ -3,7 +3,7 @@
     <Header />
     <div class="Contents">
       <div class="Section">
-        <h1 class="Heading Heading--center">{{items[$route.params.id - 1].title}}</h1>
+        <h1 class="Heading Heading--detail">{{items[$route.params.id - 1].title}}</h1>
 
         <!-- articleType == 1 -->
         <div v-if="items[$route.params.id - 1].articleType == 1" class="Detail Detail--col">
@@ -15,27 +15,59 @@
             </div>
           </div>
 
-          <div v-if="items[$route.params.id - 1].articleType == 1" class="Detail__inner Detail__inner--row">
-            <div class="Detail__images">
+          <div v-if="items[$route.params.id - 1].articleType == 1" class="Detail__article">
+            <div class="Hero__images">
               <img :src="items[$route.params.id - 1].detailSrc" loading="lazy">
             </div>
-            <div class="Detail__contents">
-              <div class="Overview">
-                <h3 class="Overview__head" v-if="items[$route.params.id - 1].overview01">Overview</h3>
-                <div class="Overview__body">
-                  <p class="Overview__paragraph" v-html="items[$route.params.id - 1].overview01"></p>
-                  <p class="Overview__paragraph" v-html="items[$route.params.id - 1].overview02"></p>
-                </div>
+            <div class="Overview">
+              <h3 class="Overview__head" v-if="items[$route.params.id - 1].overview01">概要</h3>
+              <div class="Overview__body">
+                <p class="Overview__text" v-html="items[$route.params.id - 1].overview01"></p>
+                <p class="Overview__text" v-html="items[$route.params.id - 1].overview02"></p>
               </div>
-              <h3 class="Detail__head" v-if="items[$route.params.id - 1].feature01">特徴01</h3>
-              <p class="Detail__paragraph" v-html="items[$route.params.id - 1].feature01"></p>
-              <h3 class="Detail__head" v-if="items[$route.params.id - 1].feature02">特徴02</h3>
-              <p class="Detail__paragraph" v-html="items[$route.params.id - 1].feature02"></p>
-              <h3 class="Detail__head" v-if="items[$route.params.id - 1].results">成果</h3>
-              <p class="Detail__paragraph" v-html="items[$route.params.id - 1].results"></p>
+            </div>
+
+            <div class="Detail__contents" v-if="items[$route.params.id - 1].title01">
+              <div class="Detail__inner">
+                <h3 class="Detail__head" v-html="items[$route.params.id - 1].title01"></h3>
+                <p class="Detail__paragraph" v-html="items[$route.params.id - 1].description01"></p>
+              </div>
+            </div>
+
+            <div class="Detail__contents" v-if="items[$route.params.id - 1].title02">
+              <div class="Detail__inner" v-if="items[$route.params.id - 1].title02">
+                <h3 class="Detail__head" v-html="items[$route.params.id - 1].title02"></h3>
+                <p class="Detail__paragraph" v-html="items[$route.params.id - 1].description02"></p>
+              </div>
+
+              <div class="Detail__image Detail__image--left" v-if="items[$route.params.id - 1].image01">
+                <img :src="items[$route.params.id - 1].image01" loading="lazy">
+              </div>
+              <div class="Detail__image Detail__image--right" v-if="items[$route.params.id - 1].image02">
+                <img :src="items[$route.params.id - 1].image02" loading="lazy">
+              </div>
+              <div class="Detail__image Detail__image--right" v-if="items[$route.params.id - 1].image03">
+                <img :src="items[$route.params.id - 1].image03" loading="lazy">
+              </div>
+
+              <div class="Detail__inner" v-if="items[$route.params.id - 1].title03 || items[$route.params.id - 1].description03 ">
+                <h3 class="Detail__head" v-html="items[$route.params.id - 1].title03"></h3>
+                <p class="Detail__paragraph" v-html="items[$route.params.id - 1].description03"></p>
+              </div>
+
+              <div class="Detail__inner" v-if="items[$route.params.id - 1].title04">
+                <h3 class="Detail__head" v-html="items[$route.params.id - 1].title04"></h3>
+                <p class="Detail__paragraph" v-html="items[$route.params.id - 1].description04"></p>
+              </div>
+
+              <div class="Detail__inner" v-if="items[$route.params.id - 1].results">
+                <h3 class="Detail__head" v-if="items[$route.params.id - 1].results">成果</h3>
+                <p class="Detail__paragraph" v-html="items[$route.params.id - 1].results"></p>
+              </div>
+
               <div class="Btn__wrap">
                 <router-link to="/archive/" class="Btn Btn--white">実績一覧へ</router-link>
-                <a class="Btn" v-if="items[$route.params.id - 1].anchor" :href="items[$route.params.id - 1].anchor" target="_blank" rel="noopener">Webサイトはこちら</a>
+                <a class="Btn" v-if="items[$route.params.id - 1].anchor" :href="items[$route.params.id - 1].anchor" target="_blank" rel="noopener">{{items[$route.params.id -1 ].btnText}}</a>
               </div>
             </div>
           </div>
@@ -63,7 +95,7 @@
               <p class="Detail__paragraph" v-html="items[$route.params.id - 1].results"></p>
               <div class="Btn__wrap">
                 <router-link to="/archive/" class="Btn Btn--white">実績一覧へ</router-link>
-                <a class="Btn" v-if="items[$route.params.id - 1].anchor" :href="items[$route.params.id - 1].anchor" target="_blank" rel="noopener">Webサイトはこちら</a>
+                <a class="Btn" v-if="items[$route.params.id - 1].anchor" :href="items[$route.params.id - 1].anchor" target="_blank" rel="noopener">{{btnText}}</a>
               </div>
             </div>
             <div class="Detail__images">
