@@ -3,7 +3,10 @@
     <Header />
     <div class="Contents">
       <div class="Section">
-        <h1 class="Heading Heading--detail">{{items[$route.params.id - 1].title}}</h1>
+        <h1 class="Heading Heading--detail">
+          <span v-if="items[$route.params.id - 1].id != 1 && items[$route.params.id - 1].id != 10" class="Heading__subtitle">{{items[$route.params.id - 1].anchor}}</span>
+          {{items[$route.params.id - 1].title}}
+        </h1>
 
         <!-- articleType == 1 -->
         <div v-if="items[$route.params.id - 1].articleType == 1" class="Detail Detail--col">
@@ -34,10 +37,10 @@
               </div>
             </div>
 
-            <div class="Detail__contents" v-if="items[$route.params.id - 1].title02">
-              <div class="Detail__inner" v-if="items[$route.params.id - 1].title02">
-                <h3 class="Detail__head" v-html="items[$route.params.id - 1].title02"></h3>
-                <p class="Detail__paragraph" v-html="items[$route.params.id - 1].description02"></p>
+            <div class="Detail__contents">
+              <div class="Detail__inner" v-if="items[$route.params.id - 1].title02 || items[$route.params.id - 1].description02">
+                <h3 class="Detail__head" v-if="items[$route.params.id - 1].title02" v-html="items[$route.params.id - 1].title02"></h3>
+                <p class="Detail__paragraph" v-if="items[$route.params.id - 1].description02" v-html="items[$route.params.id - 1].description02"></p>
               </div>
 
               <div class="Detail__image Detail__image--left" v-if="items[$route.params.id - 1].image01">
@@ -46,7 +49,7 @@
               <div class="Detail__image Detail__image--right" v-if="items[$route.params.id - 1].image02">
                 <img :src="items[$route.params.id - 1].image02" loading="lazy">
               </div>
-              <div class="Detail__image Detail__image--right" v-if="items[$route.params.id - 1].image03">
+              <div class="Detail__image Detail__image--left" v-if="items[$route.params.id - 1].image03">
                 <img :src="items[$route.params.id - 1].image03" loading="lazy">
               </div>
 
@@ -95,7 +98,7 @@
               <p class="Detail__paragraph" v-html="items[$route.params.id - 1].results"></p>
               <div class="Btn__wrap">
                 <router-link to="/archive/" class="Btn Btn--white">実績一覧へ</router-link>
-                <a class="Btn" v-if="items[$route.params.id - 1].anchor" :href="items[$route.params.id - 1].anchor" target="_blank" rel="noopener">{{btnText}}</a>
+                <a class="Btn" v-if="items[$route.params.id - 1].anchor" :href="items[$route.params.id - 1].anchor" target="_blank" rel="noopener">{{items[$route.params.id -1 ].btnText}}</a>
               </div>
             </div>
             <div class="Detail__images">

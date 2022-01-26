@@ -17,6 +17,7 @@ $theme-colors: (
   Angular: #BD002E,
   MovableType: #002666,
   Design: #c66394,
+  XD:#470137
 );
 
 // 使うときは↓こう（each利用）
@@ -24,4 +25,8 @@ $theme-colors: (
   .Label--#{$key} {
       background-color: $color;
   }
+}
+
+.Label--XD {
+  color: #fb65fa;
 }
