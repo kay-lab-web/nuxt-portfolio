@@ -90,9 +90,8 @@
 
           <div v-if="items[$route.params.id - 1].articleType != 1" class="Detail__inner Detail__inner--row">
             <div class="Detail__contents">
-              <h3 class="Detail__head" v-if="items[$route.params.id - 1].feature01">特徴01</h3>
+              <h3 class="Detail__head" v-if="items[$route.params.id - 1].feature01">概要</h3>
               <p class="Detail__paragraph" v-html="items[$route.params.id - 1].feature01"></p>
-              <h3 class="Detail__head" v-if="items[$route.params.id - 1].feature02">特徴02</h3>
               <p class="Detail__paragraph" v-html="items[$route.params.id - 1].feature02"></p>
               <h3 class="Detail__head" v-if="items[$route.params.id - 1].results">成果</h3>
               <p class="Detail__paragraph" v-html="items[$route.params.id - 1].results"></p>
