@@ -46,8 +46,6 @@
                 <input class="Checkbox" type="checkbox" name="checkedCategory" value="Vuejs" v-model="checkedCategory" id="cat_vue">
                 <label class="Checkbox__label" for="cat_vue">Vue.js</label>
 
-                <input class="Checkbox" type="checkbox" name="checkedCategory" value="SPA" v-model="checkedCategory" id="cat_spa">
-                <label class="Checkbox__label" for="cat_spa">SPA</label>
                 <input class="Checkbox" type="checkbox" name="checkedCategory" value="Angular" v-model="checkedCategory" id="cat_angular">
                 <label class="Checkbox__label" for="cat_angular">Angular</label>
                 <input class="Checkbox" type="checkbox" name="checkedCategory" value="Wordpress" v-model="checkedCategory" id="cat_wordpress">
@@ -183,7 +181,7 @@
             description: "医療法人 せいわ会さまが2020年6月に開院した、\r\n広島中央リハビリテーション病院のWebサイト&採用サイトを構築いたしました。",
             feature01: "コーポレートサイトでは、「施設の情報」、「入院までの流れ」といった利用者が知りたい情報をわかりやすくまとめております。\r\nまた、簡単に入院費用のシミュレーションができるページを作成しました。実際にサービスを利用するユーザー層や、潜在層ユーザーがサービスの利用までをイメージしやすくなるよう情報を設計しております。",
             feature02: "採用サイトでは、求職者の方がすぐに採用担当者様に応募ができるよう、Wordpressの記事で採用の募集要項を作成し、問い合わせフォームとIndeedやGoogleの仕事検索にも連携させています。",
-            results: "公開1か月で10件もの採用問い合わせ達成。\r\nCV率1.7%と、上々の滑り出しとなりました。",
+            results: "公開1か月で10件もの採用問い合わせ達成。上々の滑り出しとなりました。",
             imgSrc: require("~/assets/images/img_archive_hirochu-rh.jpg"),
             detailSrc: require("~/assets/images/img_detail_hirochu-rh.png"),
             btnText: "webサイトはこちら",
@@ -197,8 +195,7 @@
             category: ["Wordpress"],
             subtitle: "社内報の作成",
             description: "マツダ株式会社様の社内報の制作を担当いたしました。\r\nWordpressの独自テーマの開発にあたり、先方のシステム担当者様と弊社制作チームで協力いたしました。",
-            feature01: "独自テーマを作成するにあたり、Wordpressデフォルトの機能と追加プラグインの機能変更を実施しております。",
-            feature02: "弊社が開発したソースコードを納品後、クライアント様の作業ミスでWordpressが本番環境で正常に動作しない不具合に対応する場面がありました。サーバー関連の知識を要する対応のため、これまでのWordpressの制作案件で培ってきたノウハウが活かせた仕事となりました。",
+            feature01: "独自テーマを作成するにあたり、Wordpressでのコメント関連の機能変更と追加プラグインの機能変更に関連する調査を担当いたしました。",
             imgSrc: require("~/assets/images/img_archive_mazda.jpg"),
             detailSrc: require("~/assets/images/img_detail_mazda.png"),
             btnText: "webサイトはこちら",
@@ -254,7 +251,7 @@
             category: ["Wordpress","Service"],
             subtitle: "障害年金相談窓口 ソシオノーム - 傷病別の受給事例",
             description: "わかりにくい障害年金の受給ケースを実際の事例を基にWordpressの記事として症例別に紹介。",
-            feature01: "主にWordpressでの「お知らせ」ブログと「症例別の受給事例」ブログの組み込みを担当させていただきました。<br>特に、「症例別での受給事例」ブログでは、通常の記事を表示させる一覧画面・カテゴリ別画面・詳細画面を作成するだけではなく、検索機能も追加し、ユーザーが知りたい症例にたどり着くことができる機能を実施しました。",
+            feature01: "主にWordpressでの「お知らせ」ブログと「症例別の受給事例」ブログの組み込みを担当させていただきました。<br>特に、「症例別での受給事例」ブログでは、通常の記事を表示させる一覧画面・カテゴリ別画面・詳細画面を作成するだけではなく、検索機能も追加し、ユーザーが知りたい症例にたどり着くことができる機能を実施いたしました。",
             results: "リニューアル前と比較し、アクセス数3倍に。",
             imgSrc: require("~/assets/images/img_archive_socio-sr.jpg"),
             detailSrc: require("~/assets/images/img_detail_socio-sr.png"),
@@ -263,14 +260,12 @@
           },
           {
             id: 10,
-            date: "2018/11",
+            date: "2018/夏頃",
             title: "株式会社エムネス",
             type: "phonogram",
-            category: ["Angular","SPA","Service"],
+            category: ["Angular"],
             subtitle: "遠隔画像診断 LOOKREC",
-            description: "株式会社エムネス様のエンジニアと協働。<br>クラウド型医療システム「LOOKREC」を開発。<br><br>【参考】<br><a href='https://www.mnes.org/lookrec/' target='_blank' rel='noopener'>LOOKRECとは？ - 株式会社エムネス </a>",
-            feature01: "株式会社エムネス様が提供する医師向け画像診断クラウドサービス、「LOOKREC」の「電子カルテ」に伴うフロントエンド開発を主に担当いたしました。\r\n当サービスを利用する医師が入力作業を繰り返すにあたり、UIに配所したインタフェースの作成に注力いたしました。\r\nコーディング面ではエムネス様側の要望により、Angular.jsを利用したフレームワークでの開発を実施。加えて、弊社の通常業務で開発する企業サイトとは異なるアプリケーション向けのCSS設計を採用し、効率的な開発を行いました。",
-            results: "各メディア（Web・民法）、Google社に掲載いただいております。\r\n\r\n<a href='https://www.mnes.org/news/884' target='_blank' rel='noopener'> - 株式会社エムネス「ワールドビジネスサテライトに取り上げていただきました。」</a><br><a href='https://cloud.google.com/blog/ja/topics/customers/mens-app-engine-kubernetes-engine' target='_blank' rel='noopener'> - Google Cloud ブログ</a>",
+            feature01: "株式会社エムネス様が提供する医師向け画像診断クラウドサービス、「LOOKREC」の「電子カルテ」のUI実装を主に担当いたしました。\r\n当サービスを利用する担当医師が入力作業を繰り返すにあたり、UIに配慮したインタフェースの作成に注力いたしました。\r\nAngularでの開発は初だったのでドキュメントを読み解きながら開発",
             imgSrc: require("~/assets/images/img_archive_lookrec.jpg"),
             detailSrc: require("~/assets/images/img_detail_lookrec.png"),
             btnText: "webサイトはこちら",
@@ -313,8 +308,8 @@
             category: ["MovableType","Corporate","Renewal"],
             subtitle: "中規模コーポレートサイトリニューアル",
             description: "精米機メーカーのサタケ様のコーポレートサイトをリニューアルいたしました。リニューアルするにあたり、MovableTypeの組み込みと各ブログの構築を担当いたしました。",
-            feature01: "リニューアル以前は約300ページ程度の静的ファイルで作成されていた「製品情報」ページ群を、MovableTypeの「製品ブログ」の記事としてまとめました。Webスクレイピングで技術検証を行い、プログラミングで記事作成数時の工数を削減できるかどうかの調査を実施。開発も担当させていただきました。",
-            feature02: "加えて、「お知らせ」ブログの開発も担当させていただきました、約10年も運用を続けているWebサイトのため、記事の情報を「簡潔に・わかりやすく」まとめ、ストレスの少ない運用・閲覧ができるように開発しております。",
+            feature01: "webサイトリニューアル以前は約300ページ程度の静的ファイルで作成されていた「製品情報」ページ群を、MovableTypeの「製品ブログ」の記事としてまとめるにあたって、スクレイピングで検証を行い、記事作成数時の工数を削減できるかどうかの調査を実施いたしました。",
+            feature02: "加えて、「お知らせ」ブログの開発も担当させていただきました、約10年も運用を続けており、今後も更新頻度が高いため、カテゴリ分類がし易いよう制作いたしました。",
             imgSrc: require("~/assets/images/img_archive_satake-co.jpg"),
             detailSrc: require("~/assets/images/img_detail_satake-co.png"),
             btnText: "webサイトはこちら",
@@ -329,7 +324,7 @@
             subtitle: "サービスサイトリニューアル",
             description: "広島のTVCM等でおなじみの「MEGAEGG」、株式会社エネルギア・コミュニケーションズ様のリニューアル案件に携わりました。",
             feature01: "協力企業とともに各ページのマークアップを行っております。<br>大規模サイトでのCDGルール（CSS設計）の重要性を学ばせていただきました。",
-            feature02: "また、リニューアルに伴い「料金シミュレーション」ページの作成をVue.jsで行いました。利用者側にとってわかりにくい料金プランをわかりやすく。Vus.jsでの開発とシステムの連携を行いました。",
+            feature02: "また、リニューアルに伴い「料金シミュレーション」ページの作成をVue.jsで行いました。利用者側にとってわかりにくい料金プランをできるだけ簡単に実装いたしました。",
             imgSrc: require("~/assets/images/img_archive_megaegg.jpg"),
             detailSrc: require("~/assets/images/img_detail_megaegg.png"),
             btnText: "webサイトはこちら",
