@@ -123,9 +123,12 @@
   margin-bottom: 4rem;
   &__head {
     font-weight: 700;
-    width: 15rem;
+    width: 10rem;
   }
   &__text {
     margin-bottom: 0.666rem;
+  }
+  &__body {
+    width: calc(100% - 10rem);
   }
 }
