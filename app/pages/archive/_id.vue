@@ -71,6 +71,7 @@
               <div class="Btn__wrap">
                 <router-link to="/archive/" class="Btn Btn--white">実績一覧へ</router-link>
                 <a class="Btn" v-if="items[$route.params.id - 1].anchor" :href="items[$route.params.id - 1].anchor" target="_blank" rel="noopener">{{items[$route.params.id -1 ].btnText}}</a>
+                <a class="Btn" v-if="items[$route.params.id - 1].prototype" :href="items[$route.params.id - 1].prototype" target="_blank" rel="noopener">プロトタイプはこちら</a>
               </div>
             </div>
           </div>
