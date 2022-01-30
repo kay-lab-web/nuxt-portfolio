@@ -17,7 +17,8 @@ $theme-colors: (
   Angular: #BD002E,
   MovableType: #002666,
   Design: #c66394,
-  XD:#470137
+  XD:#470137,
+  NuxtJS: #2b475e,
 );
 
 // 使うときは↓こう（each利用）
@@ -29,4 +30,7 @@ $theme-colors: (
 
 .Label--XD {
   color: #fb65fa;
+}
+.Label--NuxtJS {
+  color: #20c68f;
 }
