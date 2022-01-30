@@ -3,18 +3,21 @@
     "name": "archive",
     "path": "/archive",
     "component": "D:\\\\web_dev\\\\nuxt-portfolio\\\\app\\\\pages\\\\archive\\\\index.vue",
-    "chunkName": "pages/archive/index"
+    "chunkName": "pages/archive/index",
+    "_name": "_2c25a4b2"
   },
   {
     "name": "archive-id",
     "path": "/archive/:id",
     "component": "D:\\\\web_dev\\\\nuxt-portfolio\\\\app\\\\pages\\\\archive\\\\_id.vue",
-    "chunkName": "pages/archive/_id"
+    "chunkName": "pages/archive/_id",
+    "_name": "_9b2f2462"
   },
   {
     "name": "index",
     "path": "/",
     "component": "D:\\\\web_dev\\\\nuxt-portfolio\\\\app\\\\pages\\\\index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_6ea56a6a"
   }
 ]
