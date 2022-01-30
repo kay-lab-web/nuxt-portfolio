@@ -267,7 +267,7 @@
             type: "phonogram",
             category: ["Angular"],
             subtitle: "遠隔画像診断 LOOKREC",
-            feature01: "株式会社エムネス様が提供する医師向け画像診断クラウドサービス、「LOOKREC」の「電子カルテ」のUI実装を主に担当いたしました。\r\n当サービスを利用する担当医師が入力作業を繰り返すにあたり、UIに配慮したインタフェースの作成に注力いたしました。\r\nAngularでの開発は初だったのでドキュメントを読み解きながら開発",
+            feature01: "株式会社エムネス様が提供する医師向け画像診断クラウドサービス、「LOOKREC」の「電子カルテ」画面におけるUI実装を主に担当いたしました。\r\n当サービスを利用する担当医師が入力作業を繰り返すにあたり、UIに配慮したインタフェースの作成に注力いたしました。",
             imgSrc: require("~/assets/images/img_archive_lookrec.jpg"),
             detailSrc: require("~/assets/images/img_detail_lookrec.png"),
             btnText: "webサイトはこちら",
