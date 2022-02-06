@@ -2,7 +2,7 @@
   <div class="Main">
     <Header />
     <div class="Contents">
-      <div class="Section">
+      <div class="Section Section--lower">
         <h1 class="Heading Heading--detail">
           <span v-if="items[$route.params.id - 1].id != 1 && items[$route.params.id - 1].id != 10" class="Heading__subtitle">{{items[$route.params.id - 1].anchor}}</span>
           {{items[$route.params.id - 1].title}}

@@ -2,12 +2,30 @@
 @import "../_foundation/variables";
 @import "../_foundation/mediaqueries";
 
+.Section--lower {
+  animation: FadeIn 0.5s ease-in-out 0s;
+}
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .Heading {
   &--detail {
     font-size: 3.5rem;
     margin-bottom: 2rem;
     font-weight: 700;
   }
+}
+
+.Hero__images {
+  background-color: $offWhite;
+  border-radius: 1rem;
+  overflow: hidden;
 }
 
 .Detail {
@@ -124,11 +142,17 @@
   &__head {
     font-weight: 700;
     width: 10rem;
+    @include mq-max(xs) {
+      width: 5rem;
+    }
   }
   &__text {
     margin-bottom: 0.666rem;
   }
   &__body {
     width: calc(100% - 10rem);
+    @include mq-max(xs) {
+      width: calc(100% - 5rem);
+    }
   }
 }

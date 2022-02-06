@@ -71,7 +71,9 @@
 
           <ul class="Card">
             <li class="Card__item" v-for="item in matched" :key="item.id" @click="move(item.id)">
-              <img :src="item.imgSrc" alt="">
+              <figure class="Card__head">
+                <img :src="item.imgSrc" loading="lazy" alt="">
+              </figure>
               <div class="Card__body">
                 <div class="Card__modules">
                   <span class="Card__date">{{ item.date }}</span><br>
