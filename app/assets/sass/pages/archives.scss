@@ -4,6 +4,19 @@
 @import "../_object/_project/p-card";
 @import "../_object/_project/p-formparts";
 
+
+.Section--lower {
+  animation: FadeIn 0.5s ease-in-out 0s;
+}
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .Heading {
   &--archive {
     font-size: 3.5rem;
