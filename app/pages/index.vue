@@ -6,10 +6,15 @@
     <div class="Section Section--glay Section--about" id="about">
       <section class="Section__inner">
         <h2 class="Heading Heading--center">About</h2>
-        <p class="Paragraph">
-          2016/12より、Web制作会社でwebフロントエンドエンジニアとして、地元広島を中心とする企業のwebサイトの制作・保守、webアプリケーションの開発・テスト・保守までを4年弱経験した後、<br>
-          2020/10より、飲食Gr.店を運営する企業内のwebデザイナー担当としてwebサイトのUXUIデザイン・運用を1年程経験して参りました。</p>
-        <p class="Paragraph">これまでwebサイト、プロダクト、サービスと幅広く携わってきた中でも、UXリサーチ、webサイトデザインを得意としております。</p>
+        <dl class="Timeline">
+          <dt class="Timeline__date">2016/12～</dt>
+          <dd class="Timeline__content">Web制作会社でコーダー/フロントエンドエンジニアとして、webサイトの制作・保守、webアプリケーション・webサービスの開発・テスト・保守といったwebに関連する業務を3年10ヵ月経験する中で、地元広島を中心とする企業様の受託案件や代理店案件を中心にビジネス課題の解決に寄与して参りました。</dd>
+        </dl>
+        <dl class="Timeline">
+          <dt class="Timeline__date">2020/10</dt>
+          <dd class="Timeline__content">地元広島にて高級料亭を運営している企業内のweb制作担当として、webサイトのデザイン～制作～運用を1年程経験して参りました。</dd>
+        </dl>
+        <p class="Paragraph">これまでwebサイトやサービスの制作と幅広く携わってきた中でも、webサイトにおける実装を得意としております。</p>
         <div class="Btn__wrap">
           <NuxtLink to="/archive/" class="Btn Btn--keyColor">実績一覧へ</NuxtLink>
         </div>
@@ -70,6 +75,67 @@ export default {
 .Section__inner {
   max-width: $xs;
   margin: 0 auto;
+}
+
+.Timeline {
+  position: relative;
+  padding-left: 3rem;
+  margin-bottom: 1rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 1rem;
+    left: 9px;
+    width: 2px;
+    height: calc(100% + 1rem);
+    background-color: $mainColor;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 10px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: $mainColor;
+    z-index: 1;
+  }
+  &:last-of-type {
+    margin-bottom: 4rem;
+    &::before {
+      background: linear-gradient(180deg, $mainColor 50%, $offWhite 75%);
+    }
+  }
+  &__date {
+    font-size: 1.33rem;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 7px;
+      top: 13px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: lighten($mainColor, 40%);
+      animation: 1.2s ease-in-out infinite alternate forwards running Lamp;
+      z-index: 2;
+    }
+  }
+}
+
+
+@keyframes Lamp {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .Paragraph {
