@@ -14,7 +14,7 @@
           <dt class="Timeline__date">2020/10</dt>
           <dd class="Timeline__content">地元広島にて高級料亭を運営している企業内のweb制作担当として、webサイトのデザイン～制作～運用を1年程経験して参りました。</dd>
         </dl>
-        <p class="Paragraph">これまでwebサイトやサービスの制作と幅広く携わってきた中でも、webサイトにおける実装を得意としております。</p>
+        <p class="Paragraph">これまでwebサイトやサービスの制作と幅広く携わってきた中でも、CMSを伴うwebサイトにおける実装を得意としております。</p>
         <div class="Btn__wrap">
           <NuxtLink to="/archive/" class="Btn Btn--keyColor">実績一覧へ</NuxtLink>
         </div>
