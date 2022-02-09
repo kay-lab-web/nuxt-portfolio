@@ -129,9 +129,9 @@
             image04: "",
             imgSrc: require("@/assets/images/img_archive_hiroshima-oyster.jpg"),
             detailSrc: require("@/assets/images/img_detail_hiroshima-oyster.png"),
-            btnText: "webデザインはこちら",
+            btnText: "XDはこちら",
             anchor: "https://xd.adobe.com/view/6e832938-499b-4683-a03c-444a811b8e25-3bd0/",
-            prototype: "https://trusting-swanson-96ff57.netlify.app/"
+            prototype: "https://frosty-jennings-9d323e.netlify.app/"
           },
           {
             id: 2,
