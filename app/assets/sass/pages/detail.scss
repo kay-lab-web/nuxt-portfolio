@@ -127,8 +127,8 @@
       margin: 1rem 0;
     }
   }
-  .Btn--white {
-    margin: 1rem;
+  .Btn {
+    margin: 10px;
     @include mq-max(xs) {
       margin: 1rem 0 0;
     }
