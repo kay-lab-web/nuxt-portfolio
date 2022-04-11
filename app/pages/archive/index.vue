@@ -131,7 +131,7 @@
             detailSrc: require("@/assets/images/img_detail_hiroshima-oyster.png"),
             btnText: "XDはこちら",
             anchor: "https://xd.adobe.com/view/6e832938-499b-4683-a03c-444a811b8e25-3bd0/",
-            prototype: "https://frosty-jennings-9d323e.netlify.app/"
+            // prototype: "https://frosty-jennings-9d323e.netlify.app/"
           },
           {
             id: 2,
